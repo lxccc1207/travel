@@ -16,9 +16,10 @@
 
 #### 使用说明
 
-1. xxxx
-2. xxxx
-3. xxxx
+1. git clone 项目地址
+2. git add . 不要忘记"." 更新之后添加到仓库
+3. git commit -m '内容'  解释提交代码
+4. git push  提交到码云
 
 #### 参与贡献
 
