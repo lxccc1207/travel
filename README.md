@@ -9,9 +9,10 @@
 
 #### 安装教程
 
-1. xxxx
-2. xxxx
-3. xxxx
+1. npm i vue-cli -g
+2. vue init webpack travel
+3. cd travel
+4. npm run dev
 
 #### 使用说明
 
