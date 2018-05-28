@@ -52,7 +52,7 @@ export default {
     /*height:26.56vw 兼容性不好，考虑传统写法*/
     overflow:hidden
     height:0
-    padding-bottom:26.56%
+    padding-bottom:26.56% /*表示宽高比*/
     background:#eee
 
     .swiper-img
