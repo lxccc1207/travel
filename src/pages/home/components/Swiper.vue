@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-  <swiper :options="swiperOption">
+  <swiper :options="swiperOption" v-if="showSwiper">
     <!-- slides -->
-    <swiper-slide v-for="item of swiperList" :key="item.id">
+    <swiper-slide v-for="item of list" :key="item.id">
       <img class="swiper-img" :src="item.imgUrl"  />
     </swiper-slide>
 
@@ -18,28 +18,20 @@
 <script>
 export default {
   name:'HomeSwiper',
+ 
   data(){
       return{
         swiperOption:{
           pagination:'.swiper-pagination', //用于分页的点
           loop:true //首尾连着循环
-        },
-        swiperList:[
-          {
-            id:'0001',
-            imgUrl:'https://imgs.qunarzz.com/piao/fusion/1804/bd/8e4a1c3f470d3702.jpg_640x170_c1e8baeb.jpg'
-          },
-          {
-            id:'0002',
-            imgUrl:'https://imgs.qunarzz.com/piao/fusion/1710/94/e41712475cc4e702.jpg_640x170_f5dd3e83.jpg'
-          },
-          {
-            id:'0003',
-            imgUrl:'https://imgs.qunarzz.com/piao/fusion/1804/5c/969bfa7af00a2702.jpg_640x170_ec465291.jpg'
-          },
-
-        ]
+        }
       }
+  },
+  computed:{
+    //这一步的目的是解决加载成功后显示最后一张轮播图的问题，没有拿到数据的时候轮播不会被渲染，加载完成后显示第一张图
+    showSwiper(){
+      return this.list.length
+    }
   }
 }
 </script>

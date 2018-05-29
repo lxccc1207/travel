@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="swiperOption">
       <swiper-slide v-for="page of pages"><!--这里的循环很巧妙，注意-->
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
@@ -16,62 +16,14 @@
 <script>
   export default {
     name:'HomeIcons',
-        data(){
-        return{
-          iconList:[
-            {
-              id:'0001',
-              imgUrl:'https://imgs.qunarzz.com/piao/fusion/1606/b3/0249b48a69aaf49a.png',
-              desc:'热门景点'
-            },
-            {
-              id:'0002',
-              imgUrl:'https://imgs.qunarzz.com/piao/fusion/1606/b3/0249b48a69aaf49a.png',
-              desc:'热门景点'
-            },
-            {
-              id:'0003',
-              imgUrl:'https://imgs.qunarzz.com/piao/fusion/1606/b3/0249b48a69aaf49a.png',
-              desc:'热门景点'
-            },
-            {
-              id:'0004',
-              imgUrl:'https://imgs.qunarzz.com/piao/fusion/1606/b3/0249b48a69aaf49a.png',
-              desc:'热门景点'
-            },
-            {
-              id:'0005',
-              imgUrl:'https://imgs.qunarzz.com/piao/fusion/1606/b3/0249b48a69aaf49a.png',
-              desc:'热门景点'
-            },
-            {
-              id:'0006',
-              imgUrl:'https://imgs.qunarzz.com/piao/fusion/1606/b3/0249b48a69aaf49a.png',
-              desc:'热门景点'
-            },
-            {
-              id:'0007',
-              imgUrl:'https://imgs.qunarzz.com/piao/fusion/1606/b3/0249b48a69aaf49a.png',
-              desc:'热门景点'
-            },
-            {
-              id:'0008',
-              imgUrl:'https://imgs.qunarzz.com/piao/fusion/1606/b3/0249b48a69aaf49a.png',
-              desc:'热门景点'
-            },
-            {
-              id:'0009',
-              imgUrl:'https://imgs.qunarzz.com/piao/fusion/1606/b3/0249b48a69aaf49a.png',
-              desc:'热门景点'
-            },
-            {
-              id:'0010',
-              imgUrl:'https://imgs.qunarzz.com/piao/fusion/1606/b3/0249b48a69aaf49a.png',
-              desc:'热门景点'
-            },
-          ]
+  
+    data(){
+      return{
+        swiperOption:{
+          autoplay:false //禁止轮播图自动滚动
         }
-      },
+      }  
+    },
       computed:{
         //将图标列表放到二位数组中，page表示图标放在第几页，大于8的图标轮播到下一页，以此类推
         pages(){
