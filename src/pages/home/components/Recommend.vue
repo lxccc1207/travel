@@ -22,24 +22,7 @@
     data(){
     return{
       recommendList:[
-        {
-          id:'0001',
-          imgUrl:'http://img1.qunarzz.com/sight/p0/1705/5d/5dbf0520050249b7a3.img.jpg_200x200_ed86c195.jpg',
-          title:'乐岛海洋王国（乐岛海洋公园）',
-          desc:'浪漫的海洋主题乐园'
-        },
-        {
-          id:'0002',
-          imgUrl:'http://img1.qunarzz.com/sight/p0/1705/5d/5dbf0520050249b7a3.img.jpg_200x200_ed86c195.jpg',
-          title:'乐岛海洋王国（乐岛海洋公园）',
-          desc:'浪漫的海洋主题乐园'
-        },
-        {
-          id:'0003',
-          imgUrl:'http://img1.qunarzz.com/sight/p0/1705/5d/5dbf0520050249b7a3.img.jpg_200x200_ed86c195.jpg',
-          title:'乐岛海洋王国（乐岛海洋公园）',
-          desc:'浪漫的海洋主题乐园'
-        }
+
       ]
     }
   }
