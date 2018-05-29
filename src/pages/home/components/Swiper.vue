@@ -2,8 +2,8 @@
   <div class="wrapper">
   <swiper :options="swiperOption">
     <!-- slides -->
-    <swiper-slide v-for="item of swiperList">
-      <img class="swiper-img" :src="item.imgUrl" :key="item.id" />
+    <swiper-slide v-for="item of swiperList" :key="item.id">
+      <img class="swiper-img" :src="item.imgUrl"  />
     </swiper-slide>
 
     <!-- Optional controls -->
@@ -22,7 +22,7 @@ export default {
       return{
         swiperOption:{
           pagination:'.swiper-pagination', //用于分页的点
-          loop:true
+          loop:true //首尾连着循环
         },
         swiperList:[
           {
@@ -54,7 +54,6 @@ export default {
     height:0
     padding-bottom:26.56% /*表示宽高比*/
     background:#eee
-
     .swiper-img
       width:100%
 </style>

@@ -95,7 +95,8 @@
   .icons>>>.swiper-container
     height:0
     padding-bottom:50% /*表示高宽比*/
-
+  .icons
+    margin-top:0.2rem
     .icon
       overflow:hidden
       height:0
