@@ -2,7 +2,7 @@
   <div class="wrapper">
   <swiper :options="swiperOption" v-if="showSwiper">
     <!-- slides -->
-    <swiper-slide v-for="item of list" :key="item.id">
+    <swiper-slide v-for="item of swiperList" :key="item.id">
       <img class="swiper-img" :src="item.imgUrl"  />
     </swiper-slide>
 
@@ -18,7 +18,9 @@
 <script>
 export default {
   name:'HomeSwiper',
- 
+  props:{
+    swiperList:Array
+  },
   data(){
       return{
         swiperOption:{
@@ -30,7 +32,7 @@ export default {
   computed:{
     //这一步的目的是解决加载成功后显示最后一张轮播图的问题，没有拿到数据的时候轮播不会被渲染，加载完成后显示第一张图
     showSwiper(){
-      return this.list.length
+      return this.swiperList.length
     }
   }
 }
@@ -41,10 +43,10 @@ export default {
    background:#fff !important
   .wrapper
     width:100%
-    /*height:26.56vw 兼容性不好，考虑传统写法*/
+    /*height:31.25vw 兼容性不好，考虑传统写法*/
     overflow:hidden
     height:0
-    padding-bottom:26.56% /*表示宽高比*/
+    padding-bottom:31.25% /*表示宽高比*/
     background:#eee
     .swiper-img
       width:100%

@@ -2,7 +2,7 @@
   <div>
     <div class="title">周末去哪儿</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id"><!--加上border-bottom底部会自带一像素边框-->
+      <li class="item border-bottom" v-for="item of weekendList" :key="item.id"><!--加上border-bottom底部会自带一像素边框-->
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl" />
         </div>
@@ -18,30 +18,10 @@
 <script>
   export default {
     name:'HomeWeekend',
-    data(){
-    return{
-      recommendList:[
-        {
-          id:'0001',
-          imgUrl:'http://img1.qunarzz.com/sight/source/1505/d1/3070ad726f861b.jpg_r_640x214_39709b85.jpg',
-          title:'乐岛海洋王国（乐岛海洋公园）',
-          desc:'浪漫的海洋主题乐园'
-        },
-        {
-          id:'0002',
-          imgUrl:'http://img1.qunarzz.com/sight/source/1505/d1/3070ad726f861b.jpg_r_640x214_39709b85.jpg',
-          title:'乐岛海洋王国（乐岛海洋公园）',
-          desc:'浪漫的海洋主题乐园'
-        },
-        {
-          id:'0003',
-          imgUrl:'http://img1.qunarzz.com/sight/source/1505/d1/3070ad726f861b.jpg_r_640x214_39709b85.jpg',
-          title:'乐岛海洋王国（乐岛海洋公园）',
-          desc:'浪漫的海洋主题乐园'
-        }
-      ]
+    props:{
+      weekendList:Array
     }
-  }
+  
   }
 </script>
 <style lang="stylus" scoped>

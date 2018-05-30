@@ -8,9 +8,11 @@ import '@@/border.css'
 import '@@/iconfont.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
+import axios from 'axios'
 
 Vue.config.productionTip = false
 Vue.use(VueAwesomeSwiper)
+Vue.prototype.$axios = axios;
 
 new Vue({
   el: '#app',

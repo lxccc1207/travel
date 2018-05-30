@@ -19,13 +19,10 @@
 <script>
   export default {
     name:'HomeRecommend',
-    data(){
-    return{
-      recommendList:[
-
-      ]
+    props:{
+      recommendList:Array
     }
-  }
+    
   }
 </script>
 <style lang="stylus" scoped>

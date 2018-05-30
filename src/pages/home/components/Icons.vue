@@ -16,7 +16,9 @@
 <script>
   export default {
     name:'HomeIcons',
-  
+    props:{
+      iconList:Array
+    },
     data(){
       return{
         swiperOption:{
