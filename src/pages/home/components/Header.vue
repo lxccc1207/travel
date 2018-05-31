@@ -9,8 +9,10 @@
     </div>
     <router-link :to="{name:'city'}">
       <div class="header-right">
-        城市
-        <span class="iconfont arrow-icon">&#xe64a;</span>
+        <span class="header-right-city">
+          {{this.$store.state.city}}   
+          <span class="iconfont arrow-icon">&#xe64a;</span>
+        </span>
       </div>
     </router-link>
   </div>
@@ -44,18 +46,20 @@
       flex:1
       padding-left:0.2rem
       color:#ccc
-      height:0.64rem
-      line-height:0.64rem
+      height:0.6rem
+      line-height:0.6rem
       margin-top:0.12rem
       margin-left:0.2rem
       border-radius:0.1rem
       background:#fff
     .header-right
       width:1.24rem
-      float:right
+      display: inline
       text-align:center
-      color:#fff
-      .arrow-icon
-        font-size:0.24rem
-
+      color:#fff    
+      .header-right-city
+        padding :0 .22rem
+        .arrow-icon
+          font-size:0.24rem
+          margin-left:.01rem
 </style>

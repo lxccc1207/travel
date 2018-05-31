@@ -35,7 +35,7 @@ export default{
         this.$axios.get('/api/city.json')
           .then((res)=>{
             res = res.data
-             console.log(res.data)
+            // console.log(res.data)
              if(res.ret&&res.data){
               this.hotCities=res.data.hotCities
               this.cities=res.data.cities
