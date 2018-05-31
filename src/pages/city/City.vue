@@ -2,8 +2,8 @@
     <div>
        <city-header></city-header>
        <city-search></city-search>
-       <city-list :hotCities="hotCities" :cities="cities"></city-list>
-       <city-alphabet :cities="cities"></city-alphabet>
+       <city-list :hotCities="hotCities" :cities="cities" :letter="letter"></city-list>
+       <city-alphabet :cities="cities" @change="handleLetterChange"></city-alphabet>
     </div>
 </template>
 
@@ -17,7 +17,8 @@ export default{
    data(){
      return{
        hotCities:[],
-       cities:{}
+       cities:{},
+       letter:''
      }
    },
    components:{
@@ -41,6 +42,9 @@ export default{
              }
           })
          
+      },
+      handleLetterChange(letter){
+          this.letter=letter //父组件通过属性的方式接收子组件传来的数据((在data里)
       }
     }
 }

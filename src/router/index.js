@@ -8,12 +8,12 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',               //表示用户访问根路径的时候给用户展示helloworld这个组件
+      path: '/',               //表示用户访问根路径的时候给用户展示home这个组件
       name: 'home',
       component: Home
     },
     {
-      path: '/city',               //表示用户访问根路径的时候给用户展示helloworld这个组件
+      path: '/city',               
       name: 'city',
       component: City
     },
