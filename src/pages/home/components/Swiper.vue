@@ -25,7 +25,8 @@ export default {
       return{
         swiperOption:{
           pagination:'.swiper-pagination', //用于分页的点
-          loop:true //首尾连着循环
+          loop:true,//首尾连着循环
+          autoplay: 3000
         }
       }
   },
