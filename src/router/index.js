@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '../pages/home/Home' //@表示src这个根目录
-import City from '../pages/city/City' //@表示src这个根目录
+import Home from '../pages/home/Home' 
+import City from '../pages/city/City' 
+import Detail from '../pages/detail/Detail' 
 
 Vue.use(Router)
 
@@ -17,5 +18,10 @@ export default new Router({
       name: 'city',
       component: City
     },
+    {
+      path: '/detail/:id', //动态路由
+      name: 'detail',
+      component: Detail
+    }
   ]
 })
