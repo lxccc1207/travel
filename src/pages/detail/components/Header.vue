@@ -26,6 +26,7 @@ export default{
   },
   methods:{
    handleScroll(){
+      // console.log(scroll) 解绑全局事件之前在首页滚动的时候也会触发
        const top = document.documentElement.scrollTop
       // console.log(document.documentElement.scrollTop)
        if(top>60){
@@ -42,6 +43,9 @@ export default{
   },
   mounted(){
       window.addEventListener('scroll',this.handleScroll)
+  },
+  destroyed(){
+      window.removeEventListener('scroll',this.handleScroll)
   }
  
 }
