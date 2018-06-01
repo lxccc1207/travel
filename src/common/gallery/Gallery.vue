@@ -56,10 +56,10 @@ export default{
     .wrapper   
       width:100%  //父元素设置了flex，子元素会垂直居中
       height :0
-      padding-bottom :100%
+      padding-bottom :100%  
       .gallery-img
         width:100%
       .swiper-pagination
         color:#fff
-        bottom:-1rem
+        bottom:-4rem
 </style>

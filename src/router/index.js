@@ -23,5 +23,9 @@ export default new Router({
       name: 'detail',
       component: Detail
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) { //表示每次做路由切换的时候新进的页面滚动位置都在顶部
+    return { x: 0, y: 0 }
+  }
+
 })
