@@ -10,12 +10,15 @@
         </div>
       </div>
     </div>
-    <common-gallery :imgs="gallaryImgs" v-show="showGallery" @close="handleGalleryClose"></common-gallery>
+    <fade-animation><!--common-gallery被弄到插槽里，展示有渐隐渐现的效果-->
+      <common-gallery :imgs="gallaryImgs" v-show="showGallery" @close="handleGalleryClose"></common-gallery>
+    </fade-animation>
   </div>
 </template>
 
 <script>
 import CommonGallery from 'common/gallery/Gallery'
+import FadeAnimation from 'common/fadeAnimation/FadeAnimation'
 export default{
   name:'detailBanner',
   props:{
@@ -37,7 +40,8 @@ export default{
     }
   },
   components:{
-    CommonGallery
+    CommonGallery,
+    FadeAnimation
   }
 }
 </script>
