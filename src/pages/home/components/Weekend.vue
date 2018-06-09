@@ -8,7 +8,7 @@
         </div>
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
-          <p class="item-desc">{{item.desc}}</p>
+          <p class="item-desc">{{item.des}}</p>
         </div>
       </li>
     </ul>

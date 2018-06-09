@@ -36,9 +36,10 @@
     },
     methods:{
       getHomeInfo(){
-        this.$axios.get('/api/index.json')
+        this.$axios.get('/api/')
           .then((res)=>{
             res = res.data
+            console.log(res)
              if(res.ret&&res.data){
               this.swiperList=res.data.swiperList
               this.recommendList=res.data.recommendList

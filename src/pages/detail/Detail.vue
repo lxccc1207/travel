@@ -29,9 +29,9 @@ export default{
   },
   mounted(){
     //this.$axios.get('/api/detail.json?id='+this.$route.params.id)   动态路由地址
-    this.$axios.get('/api/detail.json',{
+    this.$axios.get('/api/detail',{
       params:{
-        id:this.$route.params.id
+        id:this.$route.params.id  //在recommend组件配置
       }
     }).then((res)=>{
       res = res.data

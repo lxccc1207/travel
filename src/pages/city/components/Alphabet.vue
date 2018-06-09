@@ -4,7 +4,7 @@
     :key="item"
     :ref="item"
     @click="handleLetterClick"
-    @touchstart.prevent="handleTouchStart"
+    @touchstart="handleTouchStart"
     @touchmove="handleTouchMove"
     @touchend="handleTouchEnd"
     :class="{changeBackground: activeName == item}"

@@ -32,7 +32,7 @@ export default{
     },
     methods:{
       getHomeInfo(){
-        this.$axios.get('/api/city.json')
+        this.$axios.get('/api/city')
           .then((res)=>{
             res = res.data
             // console.log(res.data)

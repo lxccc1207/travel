@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="title">热销推荐</div>
-    <ul>
+    <ul><!--动态路由配置-->
       <router-link tag="li" :to="/detail/+item.id"
         class="item border-bottom"
         v-for="item of recommendList"
@@ -11,7 +11,7 @@
         </div>
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
-          <p class="item-desc">{{item.desc}}</p>
+          <p class="item-desc">{{item.des}}</p>
           <button class="item-button">查看详情</button>
         </div>
       </router-link>     
